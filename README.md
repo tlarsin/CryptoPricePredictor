@@ -16,9 +16,13 @@ We are attempting to create a cryptocurrency price predictor using machine learn
 
 **Time Series Analysis - Regression**
 * Support Vector Machine (SVM)
-** Widely applied and well surveyed
-** Non-linear and non-stationary process
+  * Widely applied and well surveyed
+  * Non-linear and non-stationary process
 
+* Generalized Additive Model (GAM)
+  * Application: Facebook's Prophet, a forecasting tool
+  * Decomposition: Trend + Cyclical + Seasonal + Irregular
+  
 **Authors**
 
 * Benjamin Carpenter
