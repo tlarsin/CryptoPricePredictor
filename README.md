@@ -1,5 +1,4 @@
 # CryptoPricePredictor
-We are attempting to create a cryptocurrency price predictor using machine learning
 
 ## About
 
@@ -23,8 +22,24 @@ We are attempting to create a cryptocurrency price predictor using machine learn
   * Application: Facebook's Prophet, a forecasting tool
   * Decomposition: Trend + Cyclical + Seasonal + Irregular
   
-**Authors**
+### Datasets
 
+**Kaggle Datasets**
+
+* Bitcoin's data at 1-minute inverals from Jan 2012 - Jan 2018
+  * Attributes
+    * Timestamp
+    * Price (Open/High/Low/Close)
+    * Volume in BTC & USD (Value of amount transacted in 24 hours)
+
+* Several top coin's data at daily intervals over several years
+  * Attributes
+    * Timestamp
+    * Price (Open/High/Low/Close)
+    * Market Cap (Coin Price * Circulating Supply)
+
+
+### Authors
 * Benjamin Carpenter
 * Jacob Pauly
 * Shuning Jin
