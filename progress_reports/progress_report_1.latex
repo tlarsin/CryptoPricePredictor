@@ -1,0 +1,112 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\begin{document}
+\title{Cryptocurrency Price Predictor}
+\author{Benjamin Carpenter, Shuning Jin, Jacob Pauly, Tristan Larsin\\
+With help from Josh Zhao}
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%% OBJECTIVES %%%%%%%%%%%%%%%%%%%%%%%
+\section{Objectives and Justification}
+Our goal is to leverage machine learning to predict future prices in the cryptocurrency market. If we are successful it would empower businesses and individuals to make better financial investments. It would also assist in understanding the probabilities of risk and reward for specific investments.
+Dataset and Environment
+Our dataset is comprised of two separate pieces. The first is the historical price of Bitcoin from January 2012 to January 2018 \cite{bitcoin_set}. The second is a set of 1200 top performing cryptocurrencies (sans Bitcoin) from the last several years \cite{crypto_set}. They are structured as comma separated values with headers listed below. Our algorithm’s environment will be the provided data sets. Column headers include: timestamp, opening price, daily high, daily low, closing cost, daily volume, and weighted price.
+
+%%%%%%%%%%%%%%%%%%%%%%% RELATED WORKS %%%%%%%%%%%%%%%%%%%%%%%
+\section{Related Works}
+
+\quad The work proposed by \cite{zhang} is a hybrid methodology to combine the linear ARIMA and nonlinear ANN models for time series forecasting to improve performance. The empirical results with three real data sets suggest that the hybrid model outperforms its component model, and Canadian lynx data shows 19\% decrease in MSE and 8\% decrease in MAD.\\
+
+\quad In a 2014 white paper \cite{carson}, a team from the University of Manitoba uses structural support vector machines (SSVMs) in an attempt to predict future stock market prices. SSVMs are a specialized form of supervised learning algorithm that can perform linear and non-linear regression to predict similar outcomes from past data \cite{tsochan}. In their results, they found the algorithm was performing with 78\% accuracy.\\
+
+\quad Facebook has developed Prophet \cite{taylor}, a powerful tool for time series forecasting available in Python and R [Taylor, 2017]. Prophet is aimed to efficiently produce high quality forecasts with large number of time series. They used generalized additive model (GAM), which is based on time series decomposition. Three main components are used: trend, seasonality, and holiday. GAM has greate flexibility when used non-parametrically.\\
+
+\clearpage
+
+\quad Autoregressive Integrated Moving Average (ARIMA) was used by Vinay et al. \cite{vinay} to predict road-traffic volume. ARIMA is used for short-term and long-term historical data and has statistical superiority. There happens to be several variations of ARIMA that are best suited for given problems. In this paper, This research tested all of the variations to compare the different accuracies of his road-traffic volume predictions. Some variations have more overhead than others, but lack accuracy. Based purely on accuracy ARIMA-GARCH outperformed all other variations of ARIMA.\\
+
+\quad In a paper 2016 paper \cite{ved}, a team used a support vector machine (SVM) and kernel functions to forecast the stock market. They separated the stock market changes into two classifications, rising and declining. When rising, the value at $x-1$ is less than that at $x$. When declining, the value at $x+1$ is less than that at $x$. The types of SVM kernels used were linear, polynomial, and radial basis. The most accurate SVM kernel performed a 88.34\% accuracy.\\
+
+\quad Additional methods used by David Sheehan \cite{sheehan} including the long short term memory (LSTM) model, which is a type of deep learning that can predict cryptocurrency prices. LSTM models are well suited for time series data because loops in neural nets allow for persistent data. In essence, they can remember how time series data has behaved in the past. Sheehan decided to use the same Bitcoin dataset that we have chosen. This dataset includes Bitcoin’s details at a one-minute interval from January 2012 through January 2018. This provided him with six years of data. Testing his algorithm from July 1st, 2017 through November 1st, 2017 he received a mean absolute error (MAE) of 0.0392 [5]. \\
+
+\quad In our project, we will apply both SVM and GAM for cryptocurrency price prediction. While SVM has been widely applied for stock price forecasting, GAM is much less surveyed. Thus, we are interested in further investigating GAM and comparing their performance in time series forecasting.
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%% TIME TABLE %%%%%%%%%%%%%%%%%%%%%%%
+\section{Time Table}
+\begin{tabular}{ | p{1cm} | p{2cm} | p{4.5cm} | p{3cm} | }
+  \hline
+  Date & Action & Notes & Deliverables\\ \hline
+  2.1.18 & Written Project Proposal & Write out the description of our project, algorithms and previous works. & Project Proposal\\ \hline
+  2.4.18 & Preprocessing & Deal with missing values (depends on models), data transformation, variable selection. & Prepared dataset\\ \hline
+  2.22.18 & Structure project \& start development & Layout the structure of our project (file wise). Delegate roles for each section of our project. Start working on respective sections. Preliminary data analysis. & File structure and data set uploaded to Git repository.\\ \hline
+  3.1.18 & Implement an algorithm. & Testable algorithm. & Testable project\\ \hline
+  3.8.18 & Implement the remaining algorithm. & Both algorithms are now implemented and ready to be tested & 2 testable algorithms\\ \hline
+  3.15.18 & Devise Tests & Create test parameters to check accuracy of our algorithms & Runnable tests\\ \hline
+  3.22.18 & Test different parameters & Change of the parameters we are using to train the algorithm to test if we achieve a higher accuracy. & Comparison of new parameters to previous\\ \hline
+  3.29.18 & Choose best parameters & Choose the best performing parameters. & Best performing parameters\\ \hline
+  4.5.18 & Run algorithms on several cryptocurrencies & Run algorithms on several cryptocurrencies to access final accuracies.  & Accuracy of algorithms\\ \hline
+  4.24.18 & Completed Project & Submit final report & Final algorithms and accuracy \\ \hline
+\end{tabular}
+\\
+\subsection*{Justification for adjustment of timetable}
+A previous version of this proposal had an unreasonable completion date for the time series algorithms, including finishing initial implementation before they had been introduced in the course.
+%%%%%%%%%%%%%%%%%%%%%%% ALGORITHMS %%%%%%%%%%%%%%%%%%%%%%%
+\section{Algorithms}
+Time series forecasting is an important field in statistics. Classical models include ARIMA, GARCH, etc. In the past decade, machine learning has gained popularity in TSA studies, and especially Support Vector Machine (SVM) is widely applied. Currently, deep learning models stand out with their aptitude for sequential data, such as Recurrent Neural Network (RNN) and Long Short-Term Memory (LSTM).
+
+\subsection*{Generalized Additive Model (GAM)}
+The additive model is a nonparametric regression method. It has the form 
+$$Y = \alpha + \sum\limits_{j=1}^p f_{j}(X_{j}) + \epsilon$$
+Where Y is the outcome, $X_{j}$ terms are predictors; $f_{j}$ terms are unspecified smooth (nonparametric) functions, $\alpha$ is the constant intercept and $\epsilon$ is the error term. The goal is to estimate the unknown smooth functions fj’s. Fitting AM can be done by backfitting algorithm with an iterative procedure.
+\subsection*{Support Vector Machines {SVM}}
+SVM constructs a hyperplane or set of hyperplanes in a high-dimensional space, which can be used for classification, regression. It allows flexible mapping of high dimensional features to capture non-linear relationships with regularization to avoid over-fitting.
+
+\clearpage
+%%%%%%%%%%%%%%%%%%%%%%% REFERENCES %%%%%%%%%%%%%%%%%%%%%%%
+\begin{thebibliography}{9}
+    \bibitem{bitcoin_set} 
+        \textit{https://www.kaggle.com/mczielinski/bitcoin-historical-data}
+    \bibitem{crypto_set}
+        \textit{https://www.kaggle.com/akababa/cryptocurrencies}
+    \bibitem{carson}
+        \textit{Carson Kai-Sang Leung, Richard Kyle MacKinnon, and Yang Wang. 
+                A machine learning approach for stock price prediction. In 
+                Proceedings of the 18th International Database Engineering \& 
+                Applications Symposium (IDEAS '14), Ana Maria Almeida, Jorge 
+                Bernardino, and Elsa Ferreira Gomes (Eds.). 
+                ACM, New York, NY, USA, 274-277. 2014.\\
+                DOI: https://doi.org/10.1145/2628194.2628211}
+    \bibitem{sheehan}
+        \textit{David Sheehan. Predicting Cryptocurrency Prices With 
+                Deep Learning. (November 2017). 2017.}
+    \bibitem{taylor}
+        \textit{Taylor SJ, Letham B. Forecasting at scale. PeerJ 
+                Preprints 5:e3190v2 2017.\\ DOI: https://doi.org/10.7287/peerj.preprints.3190v2}
+    \bibitem{tsochan}
+        \textit{Tsochantaridis, Ioannis, et al. Support Vector Machine 
+                Learning for Interdependent and Structured Output Spaces. 
+                Twenty-First International Conference on Machine Learning - 
+                ICML '04, 2004.\\
+                DOI:10.1145/1015330.1015341.}
+    \bibitem{ved}
+        \textit{Ved Prakash Upadhyay, Subhash Panwar, Ramchander Merugu, and 
+                Ravindra Panchariya. Forecasting Stock Market Movements Using Various 
+                Kernel Functions in Support Vector Machine. In Proceedings of the 
+                International Conference on Advances in Information Communication 
+                Technology \& Computing (AICTC '16), S. K. Bishnoi, Manoj Kuri, and 
+                Vishal Goar (Eds.). ACM, New York, NY, USA, , Article 107 , 5 pages. 2016.\\ 
+                DOI: https://doi.org/10.1145/2979779.2979886}
+    \bibitem{vinay}
+         \textit{Vinay B. Gavirangaswamy, Gagan Gupta, Ajay Gupta, and Rajeev 
+                Agrawal. Assessment of ARIMA-based prediction techniques for 
+                road-traffic volume. In Proceedings of the Fifth International 
+                Conference on Management of Emergent Digital EcoSystems (MEDES '13). 
+                ACM, New York, NY, USA, 246-251. 2013.\\
+                DOI: http://dx.doi.org/10.1145/2536146.2536176}
+    \bibitem{zhang}
+        \textit{Zhang GP. Times series forecasting using a hybrid ARIMA and 
+                neural network model. Neurocomputing 50:159–75 2003.}
+    \end{thebibliography}
+\end{document}
+
