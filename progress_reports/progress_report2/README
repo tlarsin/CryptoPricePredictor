@@ -1,0 +1,12 @@
+
+latex2pdf.sh is for latex execution.
+
+--------------
+
+our paper text is in progress_report.tex
+
+--------------
+
+run the following command in terminal to create pdf of paper  
+
+pdflatex progress_report.tex
