@@ -1,0 +1,63 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\citeauthoryear{Kaggle}{}]{bitcoin_set}
+Kaggle.
+\newblock Bitcoin historical data at 1-min intervals.
+\newblock http://www.kaggle.com/mczielinski/bitcoin-historical-data.
+\newblock Accessed: 2018-02-05.
+
+\bibitem[\protect\citeauthoryear{Leung, MacKinnon, and Wang}{2014}]{leung}
+Leung, C. K.~S.; MacKinnon, R.~K.; and Wang, Y.
+\newblock 2014.
+\newblock {A Machine Learning Approach for Stock Price Prediction}.
+\newblock In {\em Proceedings of the 18th International Database Engineering},
+  274--277.
+\newblock New York, NY, USA: Association for Computing Machinery.
+
+\bibitem[\protect\citeauthoryear{Sheehan}{2017}]{sheehan}
+Sheehan, D.
+\newblock 2017.
+\newblock Predicting cryptocurrency prices with deep learning.
+
+\bibitem[\protect\citeauthoryear{Taylor and Letham}{2017}]{taylor}
+Taylor, S.~J., and Letham, B.
+\newblock 2017.
+\newblock Forecasting at scale.
+\newblock PeerJ PrePrints 5:e3190v2.
+
+\bibitem[\protect\citeauthoryear{Tsochantaridis \bgroup et al\mbox.\egroup
+  }{2004}]{tsochan}
+Tsochantaridis, I.; Hofmann, T.; Joachims, T.; and Altun, Y.
+\newblock 2004.
+\newblock Support vector machine learning for interdependent and structured
+  output spaces.
+\newblock In {\em Twenty-First International Conference on Machine Learning,
+  {ICML} 2004}.
+
+\bibitem[\protect\citeauthoryear{Ved \bgroup et al\mbox.\egroup }{2016}]{ved}
+Ved, P.~U.; Subhash, P.; Ramchander, M.; and Ravindra, P.
+\newblock 2016.
+\newblock Forecasting stock market movements using various kernel functions in
+  support vector machine.
+\newblock In {\em Proceedings of the International Conference on Advances in
+  Information Communication Technology Computing, {AICTC} 2016}.
+\newblock New York, NY, USA: Association for Computing Machinery.
+
+\bibitem[\protect\citeauthoryear{Vinay \bgroup et al\mbox.\egroup
+  }{2013}]{vinay}
+Vinay, G.; Gagan, G.; Ajay, G.; and Rajeev, A.
+\newblock 2013.
+\newblock Assessment of arima-based prediction techniques for road-traffic
+  volume.
+\newblock In {\em Proceedings of the Fifth International Conference on
+  Management of Emergent Digital EcoSystems, {MEDES} 2013},  246--251.
+\newblock New York, NY, USA: Association for Computing Machinery.
+
+\bibitem[\protect\citeauthoryear{Zhang}{2003}]{zhang}
+Zhang, G.~P.
+\newblock 2003.
+\newblock Times series forecasting using a hybrid arima and neural network
+  model.
+\newblock {\em Neurocomputing} 50:159--75.
+
+\end{thebibliography}

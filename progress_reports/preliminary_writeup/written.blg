@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: written.aux
+The style file: aaai.bst
+Database file #1: bibfile.bib
+Warning--empty year in bitcoin_set
+Warning--empty journal in sheehan
+You've used 8 entries,
+            2568 wiz_defined-function locations,
+            618 strings with 6044 characters,
+and the built_in function-call counts, 3162 in all, are:
+= -- 337
+> -- 121
+< -- 2
++ -- 40
+- -- 40
+* -- 225
+:= -- 514
+add.period$ -- 42
+call.type$ -- 8
+change.case$ -- 52
+chr.to.int$ -- 8
+cite$ -- 10
+duplicate$ -- 129
+empty$ -- 236
+format.name$ -- 51
+if$ -- 664
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 6
+newline$ -- 53
+num.names$ -- 24
+pop$ -- 63
+preamble$ -- 1
+purify$ -- 60
+quote$ -- 0
+skip$ -- 100
+stack$ -- 0
+substring$ -- 126
+swap$ -- 33
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 64
+warning$ -- 2
+while$ -- 24
+width$ -- 11
+write$ -- 113
+(There were 2 warnings)
