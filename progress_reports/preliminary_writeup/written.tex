@@ -93,7 +93,7 @@ Given $p,d,q$ order for ARIMA model, we shall firstly do d-order differencing an
 %%% 2 SVM %%%
 \subsection*{3.2 Support Vector Machine (SVM)}
 
-SVM constructs a hyperplane or set of hyperplanes in a high-dimensional space, which can be used for classification, regression. It allows flexible mapping of high dimensional features to capture non-linear relationships with regularization to avoid over-fitting. Our goal is to draw a dividing line between classes which maximizes the the space between the line and the nearest points (known as the 'margin'). In sigma notation, we want to minimize $W(\alpha)$:
+SVM constructs a hyperplane in a given dimensional-space. This plane can be used for classification and also regression if tweeked. It allows flexible mapping of high dimensional features to capture non-linear relationships with regularization to avoid over-fitting. Our goal is to draw a dividing line between classes which maximizes the the space between the line and the nearest points (known as the 'margin'). In sigma notation, we want to minimize $W(\alpha)$:
 $$ W(\alpha) = \sum_{i=1}^l \alpha_i +
     \frac{1}{2} \sum_{i=1}^l \sum_{j=1}^l y_i y_j \alpha_i \alpha_j (x_i \cdot  x_j) $$
 
